@@ -1,0 +1,20 @@
+nav.navbar-main {
+  position: fixed;
+  top: 150px;
+  left: 0;
+  padding: 10px; }
+  nav.navbar-main ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    padding: 0; }
+  nav.navbar-main ul li {
+    flex: 0 0 auto;
+    padding: 5px; }
+  nav.navbar-main ul li a i {
+    color: #fff;
+    padding: 2px; }
+  nav.navbar-main ul li a i em {
+    color: #00d; }
+  nav.navbar-main ul li a i em:hover {
+    color: #fff; }

@@ -1,0 +1,56 @@
+$color-background : #0f0f0f;
+$color-primary : #fff;
+$color-secondary : #fff; 
+$color-tertiary : #fff; 
+$color-text : #fff;
+$color-text-link : #00d;
+$color-text-emphasis: #f00;
+
+@mixin box-shadow($property) {
+    box-shadow: $property;
+    -webkit-box-shadow: $property; 
+    -ms-box-shadow: $property; 
+    -o-box-shadow: $property; 
+    -moz-box-shadow: $property; 
+} 
+// @include box-shadow(5px 10px #888888);
+
+body {
+    padding: 5px;
+    font: 16px "Lucida Grande", Helvetica, Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background: $color-background;
+    color: $color-text;
+  }
+  
+a {
+    color: $color-text-link;
+}
+
+.header {
+    flex: 0 0 auto;
+    height: 140px;
+}
+
+#particles-ashes{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: 0;
+    top: 0; 
+    left: 0; 
+}
+
+.content{ 
+    flex: 1 1 auto;
+    height: 100%;
+    z-index: 10; 
+    margin: auto;
+    padding: 20px 10px;
+}
+
+.footer {
+    flex: 0 0 auto;
+}
