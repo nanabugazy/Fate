@@ -9,7 +9,7 @@ module.exports = function(server, express) {
 
     // view engine setup
     server.set('views', path.join(__dirname, '../views'));
-    server.set('view engine', 'jade');
+    server.set('view engine', 'pug');
 
     //bring in environment variables
     require('dotenv').load();

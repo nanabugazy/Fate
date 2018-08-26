@@ -11,7 +11,7 @@
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
             "outputPath": "dist",
-            "index": "src/index.html",
+            "index": "src/views/index.html",
             "main": "src/main.ts",
             "tsConfig": "src/tsconfig.app.json",
             "polyfills": "src/polyfills.ts",
@@ -32,12 +32,11 @@
               ]
             },
             "styles": [
-              "src/assets/stylesheets/style.css", 
-              "src/assets/stylesheets/navbar.css" 
+              "src/assets/stylesheets/css/style.css", 
+              "src/assets/stylesheets/css/navbar.css" 
             ],
             "scripts": [
-              "src/assets/javascripts/particles-init.js", 
-              "src/assets/javascripts/particles.js"
+              "src/assets/javascripts/particles-init.js"
             ]
           },
           "configurations": {

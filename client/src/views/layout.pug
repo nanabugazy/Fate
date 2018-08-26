@@ -4,20 +4,10 @@ html
     title= title
     link(rel="stylesheet", href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css", integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u", crossorigin="anonymous")
     link(rel="stylesheet", href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css", integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp", crossorigin="anonymous")
-    //- link(rel="stylesheet", href="/stylesheets/style.css")
-    //- link(rel="stylesheet", href="/stylesheets/navbar.css")
     link(rel="stylesheet", href="https://use.fontawesome.com/releases/v5.2.0/css/all.css", integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ", crossorigin="anonymous")
 
+    script(src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js")
     script(src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js", integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous")
-    script(type="text/javascript" src="/javascripts/particles.js")
-    
-    script(type="text/javascript").
-      //init navbar-main
-      var navbar_main = [
-          {name:"Home", event:"/"},
-          {name:"About Us", event:"/about"}, 
-          {name:"Member Logon", event:"/logon"}
-        ];
 
   body
     
@@ -27,17 +17,21 @@ html
       h1.fate-header Fate
       h2.fate-header-sub From Ashes to Embers
 
+    - var navbar_main = [{name:"", event:"/", class:"fa fa-home"}, {name:"About Us", event:"/about", class:""}, {name:"Member Logon", event:"/logon", class:""}] 
+
     nav.navbar-main 
       ul.navlist
-        each navbar_item in [{name:"", event:"/", class:"fa fa-home"}, {name:"About Us", event:"/about", class:""}, {name:"Member Logon", event:"/logon", class:""}] 
+        each navbar_item in navbar_main 
           li
-            a(href='#{navbar_item.event}')
-              i(class='#{navbar_item.class}')
-                em. 
-                  #{navbar_item.name} 
+            a(href=navbar_item.event)
+              i(class=navbar_item.class)
+                em.
+                  #{navbar_item.name}
+    
+    app-root
 
-    block content
-               
+    block content     
+
     .footer
       span This is where the footer would go...IF I HAD ONE
 

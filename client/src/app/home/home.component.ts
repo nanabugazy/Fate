@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 
 @Component({
-  templateUrl: './home.component.jade'
+  selector: 'app-root',
+  templateUrl: './home.component.pug'
 })
 export class HomeComponent {}
