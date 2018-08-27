@@ -4,7 +4,7 @@
  */
 const fs = require('fs');
 const commonCliConfig = 'node_modules/@angular-devkit/build-angular/src/angular-cli-files/models/webpack-configs/common.js';
-const pugRule = '{ test: /.pug$/, use: [ { loader: "apply-loader" }, { loader: "pug-loader" } ] },';
+const pugRule = '{ test: /.pug$/, use: [ { loader: "apply-loader" }, { loader: "pug-loader", query: { doctype: "html", plugins: ["pug-plugin-ng"] } } ] },';
 
 fs.readFile(commonCliConfig, (err, data) => {
   if (err) { throw err; }

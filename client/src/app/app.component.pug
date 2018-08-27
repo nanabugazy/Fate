@@ -1,0 +1,27 @@
+.navbar.navbar-default
+  .container
+    #navbar-main
+      ul.nav.navbar-nav
+        li
+          a(routerLink='/', routerLinkActive='active') Home
+      ul.nav.navbar-nav.navbar-right
+        li(*ngIf='!auth.isLoggedIn()')
+          a(routerLink='/login', routerLinkActive='active') Sign in
+        li(*ngIf='auth.isLoggedIn()')
+          a(routerLink='/profile') {{ auth.getUserDetails()?.name }}
+        li(*ngIf='auth.isLoggedIn()')
+          a((click)='auth.logout()') Logout
+router-outlet
+
+
+//- .navbar.navbar-default
+//-   .container
+//-     #navbar-main
+//-       - var navbar_main = [{name:"", event:"/", class:"fa fa-home"}, {name:"About Us", event:"/about", class:""}]   
+//-       ul.nav.navbar-nav
+//-         each navbar_item in navbar_main 
+//-           li
+//-             a(routerLink=navbar_item.event)
+//-               i(class=navbar_item.class)
+//-                 em.
+//-                   #{navbar_item.name}

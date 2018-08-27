@@ -14,9 +14,9 @@ module.exports = function(server, express) {
     //bring in environment variables
     require('dotenv').load();
     // [SH] Bring in the data model
-    require(path.join(process.cwd(), '/api/models/db'));
+    require(path.join(__dirname, '../models/db'));
     // [SH] Bring in the Passport config after model is defined
-    require(path.join(process.cwd(), '/api/config/passport'));
+    require(path.join(__dirname, '../config/passport'));
 
     server.use(logger('dev'));
     server.use(express.json());
@@ -27,6 +27,6 @@ module.exports = function(server, express) {
     server.use(passport.initialize());
 
     //Pull in angular client to server
-    server.use(express.static(path.join(process.cwd(), '../client/dist')));
+    //server.use(express.static(path.join(process.cwd(), '../client/dist')));
 
 }

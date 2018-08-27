@@ -1,0 +1,19 @@
+.container
+  .row
+    .col-md-6
+      h1 Register
+      p.lead
+        | Already a member? Please 
+        a(routerLink='/login') log in
+        |  instead.
+      form((submit)='register()')
+        .form-group
+          label(for='name') Full name
+          input.form-control(type='text', name='name', placeholder='Enter your name', [(ngModel)]='credentials.name')
+        .form-group
+          label(for='email') Email address
+          input.form-control(type='email', name='email', placeholder='Enter email', [(ngModel)]='credentials.email')
+        .form-group
+          label(for='password') Password
+          input.form-control(type='password', name='password', placeholder='Password', [(ngModel)]='credentials.password')
+        button.btn.btn-default(type='submit') Register!

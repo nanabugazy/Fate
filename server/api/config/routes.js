@@ -6,8 +6,8 @@ var routesApi = require(path.join(__dirname, '../routes/index'));
 module.exports = function(server, express){
 
     //Use server and client separately
-    // var indexRouter = require('../routes/index_default');
-    // server.use('/', indexRouter);
+    var indexRouter = require('../routes/index_default');
+    server.use('/', indexRouter);
 
     // [SH] Use the API routes when path starts with /api
     server.use('/api', routesApi);

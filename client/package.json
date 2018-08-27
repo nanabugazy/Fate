@@ -9,8 +9,8 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "pug-it": "pug src/views",
-    "pug-it:w": "pug src/views -P -w",
+    "pug-it": "pug src/index.pug",
+    "pug-it:w": "pug src/index.pug -P -w",
     "build-css": "node-sass src/assets/stylesheets/scss -o src/assets/stylesheets/css",
     "watch-css": "node-sass --watch src/assets/stylesheets/scss -o src/assets/stylesheets/css",
     "postinstall": "node ./ng-add-pug-loader.js"
@@ -28,6 +28,7 @@
     "@angular/router": "^5.2.2",
     "bootstrap": "^3.3.7",
     "core-js": "^2.4.1",
+    "pug-plugin-ng": "0.0.2",
     "rxjs": "^5.5.2",
     "zone.js": "^0.8.14"
   },
